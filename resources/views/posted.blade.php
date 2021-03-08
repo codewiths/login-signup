@@ -23,8 +23,9 @@
     <div class="row">
         <div class="col-md-12">
         <h1>Post Added</h1>
-        <h6>Title: {{session('title')}}</h2>
-        <h6>Description: {{session('description')}}</h2>
+        <h6><strong>Title:</strong> {{session('title')}}</h2>
+        <h6><strong>Description:</strong> {{session('description')}}</h2>
+        <a class="btn btn-secondary" href="http://127.0.0.1:8000/show_posts">Back</a>
         <a class="btn btn-primary" href="/show_posts">Show Posts</a>
         </div>
     </div>

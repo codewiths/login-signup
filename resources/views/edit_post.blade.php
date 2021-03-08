@@ -20,10 +20,11 @@
                     <span class="mt-1 text-left">@error('title'){{$message}}@enderror</span>
 				</div>
 				<div class="form-group relative password">
-					<textarea class="form-control input-lg" name="description" cols="30" rows="10" placeholder="Description" ><?php echo $posts[0]->description; ?></textarea>
+					<textarea class="form-control input-lg" name="description" cols="30" rows="30" placeholder="Description" ><?php echo $posts[0]->description; ?></textarea>
 				</div>
 			  <div class="form-group">
 			    <button type="submit" class="btn btn-success btn-lg btn-block">Add Post</button>
+				<a class="btn btn-success btn-lg btn-block" href="http://127.0.0.1:8000/show_posts">Back</a>
 			  </div>
 			</form>
 		</div>

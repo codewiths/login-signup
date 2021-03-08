@@ -17,8 +17,13 @@ use App\Http\Controllers\BlogController;
 */
 
 Route::get('/', function () {
+    if(session()->has('user')){
+        return redirect('home');
+    }
     return view('welcome');
 });
+
+Route::view('home', 'home');
 
 Route::post('user', [UserAuthenticationController::class, 'userLogin']);
 
@@ -26,7 +31,7 @@ Route::post('register', [RegisterController::class, 'registerUser']);
 
 Route::get('/register', function(){
     if(session()->has('user')){
-        return redirect('profile');  
+        return redirect('home');  
     }
     return view('register');
 });
@@ -35,7 +40,7 @@ Route::view('profile', 'profile');
 
 Route::get('/login', function(){
     if(session()->has('user')){
-        return redirect('profile');
+        return redirect('home');
     }
     return view('login');
 });

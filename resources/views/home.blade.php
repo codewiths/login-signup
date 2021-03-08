@@ -28,19 +28,26 @@
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <button class="btn btn-primary ms-auto" onclick='window.location.replace("http://127.0.0.1:8000/register")'>Register</button>
-      <button class="btn btn-primary ms-5" onclick='window.location.replace("http://127.0.0.1:8000/login")'>Login</button>
+    <div class="d-flex ms-auto">
+            <h6 class="mt-2">{{ session('user')}}</h6>
+            <a class="btn btn-primary ms-5 me-5 w-50" href="http://127.0.0.1:8000/profile">View Profile</a>
+            <form action="/logout">
+                @csrf
+                <button class="btn btn-primary ms-5 me-5 w-50" type="submit">Logout</button>
+            </form>
+
+    </div>  
     </div>
   </div>
 </nav>
-            <!-- <div class="comtainer">
+            <div class="comtainer text-end">
                 <div class="row">
                     <div class="col-12">
-                        <button class="btn btn-primary" onclick='window.location.replace("http://127.0.0.1:8000/add_post")'>Add Post</button>
-                        <button class="btn btn-primary" onclick='window.location.replace("http://127.0.0.1:8000/show_posts")'>Show Posts</button>
+                        <button class="btn btn-primary ms-5 me-5" onclick='window.location.replace("http://127.0.0.1:8000/show_posts")'>Show Posts</button>
+                        <button class="btn btn-primary ms-5 me-5" onclick='window.location.replace("http://127.0.0.1:8000/add_post")'>Add Post</button>
                     </div>
                 </div>
-            </div> -->
+            </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
     </body>
 </html>

@@ -19,7 +19,7 @@ class UserAuthenticationController extends Controller
         if(count($checkLogin)>0) {
             $data=$req->input();
             $req->session()->put('user',$username);
-            return redirect('profile');
+            return redirect('home');
         } else {
             return redirect('login');
         }

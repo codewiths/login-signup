@@ -18,15 +18,6 @@ class PostsController extends Controller
         $req->session()->put('description', $post['description']);
         return redirect('posted');
     }
-
-    function index(){
-        return view('posts.index');
-    }
-
-    function create(){
-        return view('posts.create');
-    }
-
     function store(Request $req){
         Post::create($req->only(['title', 'description']));
     }
@@ -43,12 +34,12 @@ class PostsController extends Controller
     public function showpost($id) {
         $posts = DB::select('select * from posts where id = ?',[$id]);
         return view('edit_post',['posts'=>$posts]);
-        }
+    }
 
-        public function edit(Request $request,$id) {
-            $title = $request->input('title');
-            $description = $request->input('description');
-            DB::update('update posts set title = ?,description=? where id = ?',[$title,$description,$id]);
-            return redirect('/show_posts');
-            }
+    public function edit(Request $request,$id) {
+        $title = $request->input('title');
+        $description = $request->input('description');
+        DB::update('update posts set title = ?,description=? where id = ?',[$title,$description,$id]);
+        return redirect('/show_posts');
+    }
 }

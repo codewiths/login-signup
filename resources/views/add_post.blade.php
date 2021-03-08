@@ -35,6 +35,7 @@
 			  </div>
               
 			</form>
+			<a class="btn btn-success btn-lg btn-block" href="/home">Back</a>
 		</div>
 	</div>
     <script type="text/javascript" src="{{ asset('js/jquery.min.js') }}"></script>

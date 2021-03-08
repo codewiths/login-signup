@@ -22,6 +22,6 @@ class RegisterController extends Controller
         $req->session()->put('username', $user['name']);
         $req->session()->put('email', $user['email']);
         $user->save();
-        return view('profile', ['username'=>session('username'), 'email'=>session('email')]);
+        return view('home', ['user'=>$user->name, 'email'=>$user->email]);
     }
 }

@@ -45,7 +45,8 @@
 			</form>
             <div class="form-group">
 			    <a href="/register" class="btn btn-success btn-lg btn-block">Signup</a>
-			  </div>
+                <a href="/" class="btn btn-success btn-lg btn-block">Home</a>
+			</div>
 		</div>
 	</div>
     <script type="text/javascript" src="{{ asset('js/jquery.min.js') }}"></script>

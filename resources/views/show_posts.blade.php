@@ -17,11 +17,23 @@
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <div class="d-flex ms-auto">
+            <h6 class="mt-2">{{ session('user')}}</h6>
+            <a class="btn btn-primary ms-5 me-5" href="http://127.0.0.1:8000/profile">View Profile</a>
+            <form action="/logout">
+                @csrf
+                <button class="btn btn-primary me-5 ms-5" type="submit">Logout</button>
+            </form>
+    </div>  
+    </div>
   </div>
 </nav>
+<a class="btn btn-secondary ms-3" href="http://127.0.0.1:8000/home">Back</a>
 <div class="container text-center">
     <div class="row">
         <div class="col-md-12">
+
         <h1>Posts</h1>
         <table class="table border table-border border-dark" style="width:100%">
             <thead>

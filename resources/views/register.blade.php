@@ -58,6 +58,7 @@
 			</form>
             <div class="form-group">
 			    <a href="/login" class="btn btn-success btn-lg btn-block">Login</a>
+                <a href="/" class="btn btn-success btn-lg btn-block">Home</a>
 			</div>
 		</div>
 	</div>
